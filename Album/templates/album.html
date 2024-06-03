@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class='box'>
+     <form style='width: 50%; margin:auto' action="" method='post'>
+         {% csrf_token %}
+         <h2 class='pb-2'>ADD ALBUM</h2>
+        {{form | crispy}}
+        <button class='btn btn-warning'>Submit</button>
+    </form>
+</div>
+
+{% endblock content %}
+
